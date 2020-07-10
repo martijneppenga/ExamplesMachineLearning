@@ -73,7 +73,7 @@ Fitted_model = lambda x:  w_fit*x + b_fit
 x_range = np.array([min(x),max(x)])
 ax.plot(x_range,Fitted_model(x_range),label='Fitted model')
 # Select 100 random data points
-index = (np.random.rand(100)*(len(x)-1)).astype(np.int32)
+index = (np.random.rand(min(100,N))*(N-1)).astype(np.int32)
 ax.plot(x[index],y[index],'o',label='Data')
 ax.legend()
 
